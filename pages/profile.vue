@@ -29,6 +29,7 @@
         <p class="section__description">Rails, Django, Vue, Angular and etc... </p>
         <p class="section__description">Ruby, Python, JavaScript, TypeScript, Go, C++, C# and etc...</p>
       </section>
+      <navi-arrow down name="job"></navi-arrow>
   </app-page>
 </template>
 
