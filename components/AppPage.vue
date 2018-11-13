@@ -1,5 +1,5 @@
 <template>
-  <div class="page" @wheel.once="wheel">
+  <div class="page" @wheel.once="wheel" @touchstart="touchstart"  @touchend="touchend">
     <div class="container">
       <navi-arrow v-if="prev" up :name="prev" @click="goPrev" />
       <slot></slot>
@@ -22,6 +22,11 @@ export default {
       default: null,
     }
   },
+  data() {
+    return {
+      touchstartY: null,
+    }
+  },
   components: { NaviArrow },
   methods: {
     goPrev() {
@@ -36,7 +41,13 @@ export default {
       } else if(this.next && e.deltaY > 0) {
         this.goNext()
       }
-    }
+    },
+    touchstart(e) {
+      this.touchstartY = e.touches[0].pageY
+    },
+    touchend(e) {
+      this.wheel({ deltaY: this.touchstartY - e.changedTouches[0].pageY })
+    },
   },
 }
 </script>
