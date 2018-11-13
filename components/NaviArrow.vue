@@ -1,8 +1,6 @@
 <template>
-  <div @click="navigate">
-    <div class="triangle" :style="styles">
-      <div class="triangle__inner" :style="innerStyles"></div>
-    </div>
+  <div class="triangle" :style="styles" @click="$emit('click')">
+    <div class="triangle__inner" :style="innerStyles"></div>
   </div>
 </template>
 <script>
@@ -10,7 +8,6 @@ export default {
   props: {
     down: Boolean,
     up: Boolean,
-    name: String,
   },
 
   computed: {
@@ -41,18 +38,6 @@ export default {
       }
     },
   },
-  methods: {
-    navigate() {
-      this.$router.push({ name: this.name })
-    },
-  },
-  mounted() {
-    document.addEventListener("wheel", (e) => {
-      if (!!this.up && e.deltaY < 0 || !this.up && e.deltaY > 0) {
-        this.navigate()
-      }
-    })
-  },
 }
 </script>
 <style scoped>
@@ -62,7 +47,6 @@ export default {
   height: 0;
   border: 30px solid transparent;
   color: #d32f2f;
-  margin-left: -30px;
   cursor: pointer;
 }
 

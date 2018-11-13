@@ -1,9 +1,8 @@
 <template>
-  <app-page>
+  <app-page next="profile">
       <app-logo/>
       <h1 class="title">z@kuro</h1>
       <p class="description">Art &amp; Technology</p>
-      <navi-arrow down name="profile"></navi-arrow>
   </app-page>
 </template>
 

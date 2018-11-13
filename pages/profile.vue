@@ -1,6 +1,5 @@
 <template>
-  <app-page>
-      <navi-arrow up name="index"></navi-arrow>
+  <app-page prev="index" next="job">
       <section class="section">
         <h2 class="section__title">Accouns</h2>
         <a
@@ -29,20 +28,18 @@
         <p class="section__description">Rails, Django, Vue, Angular and etc... </p>
         <p class="section__description">Ruby, Python, JavaScript, TypeScript, Go, C++, C# and etc...</p>
       </section>
-      <navi-arrow down name="job"></navi-arrow>
   </app-page>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import AppPage from '~/components/AppPage.vue'
-import NaviArrow from '~/components/NaviArrow.vue'
 import { slideTransition } from '~/assets/transition'
 
 export default {
   transition: slideTransition,
   components: {
-    AppPage, AppLogo, NaviArrow,
+    AppPage, AppLogo,
   },
 }
 </script>

@@ -1,6 +1,5 @@
 <template>
-  <app-page>
-    <navi-arrow up name="job"></navi-arrow>
+  <app-page prev="job">
     <section class="section">
       <h2 class="section__title">Awards</h2>
       <h3 class="section__subtitle">日本情報オリンピック 2013-2014 本選 B ランク・予選 A ランク</h3>
@@ -22,13 +21,12 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import AppPage from '~/components/AppPage.vue'
-import NaviArrow from '~/components/NaviArrow.vue'
 import { slideTransition } from '~/assets/transition'
 
 export default {
   transition: slideTransition,
   components: {
-    AppPage, AppLogo, NaviArrow,
+    AppPage, AppLogo,
   },
 }
 </script>
