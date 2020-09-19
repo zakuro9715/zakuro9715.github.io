@@ -1,38 +1,37 @@
 <template>
   <app-page prev="profile" next="history">
-      <section class="section">
-        <h2 class="section__title">Job History</h2>
-        <section class="subssection">
-          <h3 class="section__subtitle">TwoGate inc.</h3>
-          <p class="section__description">Fullstack Web Enginneer</p>
-          <p class="section__description">TypeScript / JavaSript / Ruby / HTML / CSS / SCSS</p>
-          <p class="section__description">Rails / Vue / Angular / Ionic</p>
-        </section>
-        <section class="subsection">
-        <h3 class="section__subtitle">MisingLink inc.</h3>
-        <p class="section__description">Web Enginneer</p>
-        <p class="section__description">JavaSript / Ruby / HTML / CSS / SCSS</p>
-        <p class="section__description">Rails / Vue</p>
-        </section>
-        <section class="subsection">
+    <section class="section">
+      <h2 class="section__title">Job History</h2>
+      <section class="subssection">
+        <h3 class="section__subtitle">Hematite inc.</h3>
+        <p class="section__description">Enginneer</p>
+        <p class="section__description">TypeScript / JavaSript / Go / Ruby / Python / HTML / CSS</p>
+        <p class="section__description">Rails / Vue / Django / AppEngine</p>
+      </section>
+      <section class="subssection">
+        <h3 class="section__subtitle">MisingLink inc. -> TwoGate inc.</h3>
+        <p class="section__description">Fullstack Web Enginneer</p>
+        <p class="section__description">TypeScript / JavaSript / Ruby / HTML / CSS / SCSS</p>
+        <p class="section__description">Rails / Vue / Angular / Ionic</p>
+      </section>
+      <section>
         <h3 class="section__subtitle">Wantedly inc.</h3>
         <p class="section__description">Internship in the infrastructure team</p>
         <p class="section__description">Ruby</p>
         <p class="section__description">Rails / Docker / Mecab</p>
-        </section>
       </section>
+    </section>
   </app-page>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 import AppPage from '~/components/AppPage.vue'
 import { slideTransition } from '~/assets/transition'
 
 export default {
   transition: slideTransition,
   components: {
-    AppPage, AppLogo,
+    AppPage
   },
 }
 </script>

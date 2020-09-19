@@ -21,25 +21,22 @@
       </section>
       <section class="section">
         <h2 class="section__title">Skills</h2>
-        <h3 class="section__subtitle">3D Animation</h3>
-        <p class="section__description">Maya</p>
         <h3 class="section__subtitle">Programming</h3>
-        <p class="section__description">Fullstack web.</p>
-        <p class="section__description">Rails, Django, Vue, Angular and etc... </p>
-        <p class="section__description">Ruby, Python, JavaScript, TypeScript, Go, C++, C# and etc...</p>
+        <p class="section__description">Web / Native app / Compiler / OS</p>
+        <p class="section__description">Vue / Nuxt / Angular / Ionic / Rails / Django</p>
+        <p class="section__description">Ruby / Python / JavaScript / TypeScript / Go / Rust / C++ / C#</p>
       </section>
   </app-page>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 import AppPage from '~/components/AppPage.vue'
 import { slideTransition } from '~/assets/transition'
 
 export default {
   transition: slideTransition,
   components: {
-    AppPage, AppLogo,
+    AppPage
   },
 }
 </script>

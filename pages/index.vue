@@ -9,13 +9,12 @@
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import AppPage from '~/components/AppPage.vue'
-import NaviArrow from '~/components/NaviArrow.vue'
 import { slideTransition } from '~/assets/transition'
 
 export default {
   transition: slideTransition,
   components: {
-    AppPage, AppLogo, NaviArrow,
+    AppPage, AppLogo,
   },
   methods: {
     navigateDown() {
